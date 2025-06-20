@@ -16,12 +16,16 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.yourcompany.labcollect"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; connect-src 'self' http://192.168.1.13:8180 http://192.168.1.13:9090; frame-src 'self'; frame-ancestors 'self' http://localhost:3000 exp://192.168.1.13:8081/--/callback; object-src 'none';"
+      }
     },
     "plugins": [
       "expo-router",
