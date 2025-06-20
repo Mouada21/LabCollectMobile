@@ -29,7 +29,7 @@ interface AuthResponse {
 }
 
 // Define Keycloak server settings - UPDATE THIS
-const KEYCLOAK_SERVER = 'http://192.168.1.13:8180';  // Changed from old IP
+const KEYCLOAK_SERVER = 'http://10.0.2.2:8180';
 const KEYCLOAK_REALM = 'LabCollect';
 const KEYCLOAK_CLIENT_ID = 'labcollect-mobile';
 

@@ -7,7 +7,7 @@ const getHostUri = () => {
   if (__DEV__) {
     // For Android emulator
     if (Platform.OS === 'android' && !Constants.isDevice) {
-      return '192.168.1.13'; // Special IP for Android emulator to reach host
+      return '10.0.2.2'; // Special IP for Android emulator to reach host
     }
     
     // For iOS simulator
@@ -37,8 +37,7 @@ const getHostUri = () => {
 
 const hostUri = getHostUri();
 
-// Export with consistent IP addresses
-export const API_BASE_URL = `https://db27-41-249-222-216.ngrok-free.app`;
+export const API_BASE_URL = `http://${hostUri}:9090`;
 export const KEYCLOAK_SERVER = `http://${hostUri}:8180`;
 export const KEYCLOAK_REALM = 'LabCollect';
 export const KEYCLOAK_CLIENT_ID = 'labcollect-mobile';
